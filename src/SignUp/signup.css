@@ -1,0 +1,243 @@
+.sign-up-screen {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(223,226,230,1) 100%);
+}
+
+.sign-up-container {
+    height: 70%;
+    width: 55%;
+    background-color: #fff;
+    box-shadow: 0px 2px 30px #ccc6;
+    /* z-index: 1; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sign-up-header {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.2em;
+    text-align: center;   
+    margin-bottom: 4%; 
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-fullname {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    border-radius: 9999px;
+    background-color: rgb(230,230,230);
+    margin-bottom: 10px;
+}
+
+.signup-input-name {
+    border-radius: 9999px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: rgb(230,230,230);
+    height: 30px;
+    padding-left: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 1.2em;
+}
+
+.signup-input-name:focus {
+    outline:none;
+}
+
+.PersonIcon {
+    color: rgb(102,102,102);
+    transition: color 0.5s;
+}
+
+.signup-form:has(.signup-input-name:focus) .PersonIcon {
+    color: rgb(87,184,70);
+    transition: color 0.5s;
+}
+
+.signup-email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    border-radius: 9999px;
+    background-color: rgb(230,230,230);
+    margin-bottom: 10px;
+}
+
+.signup-input-email {
+    border-radius: 9999px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: rgb(230,230,230);
+    height: 30px;
+    padding-left: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 1.2em;
+}
+
+.SignUpEmailIcon {
+    color: rgb(102,102,102);
+    transition: color 0.5s;
+}
+
+.signup-form:has(.signup-input-email:focus) .SignUpEmailIcon {
+    color: rgb(87,184,70);
+    transition: color 0.5s;
+}
+
+.signup-calendar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    border-radius: 9999px;
+    background-color: rgb(230,230,230);
+    margin-bottom: 10px;
+}
+
+.signup-input-calendar {
+    border-radius: 9999px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: rgb(230,230,230);
+    height: 30px;
+    padding-left: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 1.2em;
+}
+
+.CalendarIcon {
+    color: rgb(102,102,102);
+    transition: color 0.5s;
+}
+
+.LoginPWContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    border-radius: 9999px;
+    background-color: rgb(230,230,230);
+    margin-bottom: 25px;
+}
+
+.LoginPW {
+    border-radius: 9999px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: rgb(230,230,230);
+    height: 30px;
+    padding-left: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 1.2em;
+}
+
+.LoginPW:focus {
+    outline:none;
+}
+
+.PWIcon {
+    color: rgb(102,102,102);
+    transition: color 0.5s;
+}
+
+.signup-form:has(.LoginPW:focus) .PWIcon {
+    color: rgb(87,184,70);
+    transition: color 0.5s;
+}
+
+
+.signup-form:has(.signup-input-calendar:focus) .CalendarIcon {
+    color: rgb(87,184,70);
+    transition: color 0.5s;
+}
+
+.submit-signup {
+    border-radius: 9999px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: rgb(87,184,70);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    padding: 5px;
+    margin-bottom: 25px;
+    font-size: 1.4em;
+    cursor: pointer;
+
+    &:disabled {
+        background-color: #757575;
+        cursor: auto;
+    }
+}
+
+.ORContainer {
+    width: 50%;
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.ORLine {
+    border: 1px solid rgb(102,102,102);
+    top: 50%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.ORText {
+    z-index: 1;
+    position: relative;
+    background-color: white;
+    padding-left:  7px;
+    padding-right: 7px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.signupLoader {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    z-index: 5;
+}
+
+@media screen and (max-width: 800px) {
+
+    .sign-up-screen {
+        background: rgb(255,255,255);
+    }
+
+    .sign-up-container {
+        height: 85%;
+        width: 100%;
+        box-shadow: none;
+    }
+}
