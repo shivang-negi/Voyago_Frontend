@@ -1,0 +1,143 @@
+.postlist-container {
+    display: flex;
+    flex-direction: column;
+    width: 67vw;
+    margin-left: 4vw;
+}
+
+.dashboard-createpost {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+.dashboard-textarea {
+    margin-top: 5%;
+    margin-left: 5%;
+    resize: none;
+    box-sizing: border-box;
+    background-color: #faf9f9;
+    border: 2px solid #adacac;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.dashboard-textarea:focus {
+    outline: none !important;
+    border:2px solid rgb(124, 118, 163);
+}
+
+.dashboard-post-button {
+    font-family: inherit;
+    width: 15%;
+    height: 15%;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 1.5%;
+    border:0;
+    cursor: pointer;
+    background-color: rgb(46, 113, 229);
+    color:#f8f8f8;
+}
+
+.fetchlist-container {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+.fetchlist-heading {
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.1em;
+    color: #464040;
+}
+
+.user-post {
+    margin-left: 5%;
+    margin-bottom: 3%;
+    margin-right:5%;
+    padding: 1% 2% 1% 2%;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px #d2cfcf;
+    color: #464040;
+}
+
+.user-name-stamp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-post-name {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1em;
+}
+
+.user-timestamp {
+    color: #615b5b;
+}
+
+.user-post-content {
+    margin-top:2%;
+}
+
+.user-favorite {
+    border: 0;
+    margin-top:2%;
+    cursor: pointer;
+    background-color: transparent;
+    margin-right:3%;
+}
+
+.postLoader {
+    position: absolute;
+    top:55%;
+    left: 55%;
+}
+
+.page_navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 6%;
+    margin-right: 6%;
+    justify-content: center;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+
+.footer-but {
+    padding:1%;
+    cursor: pointer;
+    background-color: #ffffff;
+    border:0;
+    font-family: "Poppins", sans-serif;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.footer-but:hover {
+    cursor: pointer;
+    color: #6887d0;
+    transition: 500ms;
+}
+
+/* .footer-but::after {
+    content: "-";
+    padding-left: 1%;
+} */
+
+/* .Page_nav {
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    color: #3c4d77;
+} */
+

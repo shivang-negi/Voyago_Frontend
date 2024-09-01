@@ -1,24 +1,14 @@
-import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../App.js';
-import { useContext } from 'react';
-import axios from 'axios';
+import { useEffect } from 'react';
+import './dashboard.css';
+import Navbar from './Navbar/Navbar.js';
+import Postlist from './PostList/Postlist.js';
 
-export default function Dashboard() {
-
-    const navigate = useNavigate();
-    const { setLoggedIn } = useContext(AuthContext);
-
-    async function logout() {
-        
-        setLoggedIn(false);
-        localStorage.removeItem('token');
-        navigate('/');
-    }
+export default function Dashboard({username,email, id}) {
 
     return (
-        <>
-            <div>YOU ARE LOGGED IN</div>
-            <button onClick={logout}>LOGOUT</button>
-        </>
+        <div className='dashboard-main-container'>
+            <Navbar username={username}/>
+            <Postlist id={id} username={username}/>
+        </div>
     )
 }

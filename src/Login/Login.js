@@ -1,7 +1,7 @@
 import './login.css';
 import { Link } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
-import { useRef, useState, useContext } from 'react';
+import { useRef, useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { SyncLoader } from 'react-spinners';
@@ -13,7 +13,11 @@ export default function Login() {
     const usernameref = useRef(null);
     const passwordRef = useRef(null);
     const [loading, setLoading] = useState(false);
-    const { setLoggedIn } = useContext(AuthContext);
+    const { loggedIn, setLoggedIn } = useContext(AuthContext);
+
+    useEffect(()=>{
+        if(loggedIn) navigate('/')
+    },[loggedIn]);
 
     async function LoginFormSubmitted(e) {
 
@@ -36,15 +40,20 @@ export default function Login() {
                 password: password
             }
 
-            axios.post('http://localhost:5000/', data)
+            axios.post('http://localhost:5000/login', data)
             .then((response)=> {
-                if(response.data['message'] === -1) {
+                if(response.data.message === -1 || response.data.message === 0) {
                     toast.error('Incorrect E-Mail or Password.',{duration: 2000})
                 }
+                else if(response.data.message === -2) {
+                    toast.error('Server failure. Please try again.',{duration: 2000})
+                }
                 else {
-                    
                     setLoggedIn(true);
                     localStorage.setItem('token',response.data['token']);
+                    localStorage.setItem('user',username);
+                    localStorage.setItem('id',response.data.user._id);
+                    localStorage.setItem('username',response.data.user.username);
                     navigate('/');  //Navigate to homepage if correct
                 }
             })
@@ -91,7 +100,7 @@ export default function Login() {
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-envelope-fill EmailIcon" viewBox="0 0 16 16">
     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
                             </svg>
-                            <input type='text' placeholder='Username' className='LoginUsername' ref={usernameref}></input>
+                            <input type='text' placeholder='E-Mail' className='LoginUsername' ref={usernameref}></input>
                         </div>
 
                         <div className='LoginPasswordContainer'>

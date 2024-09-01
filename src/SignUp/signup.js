@@ -88,16 +88,25 @@ export default function Signup() {
 
             axios.post('http://localhost:5000/signup', data)
             .then((response)=> {
-                if(response.data['message'] === -1) {
+                if(response.data.message === -1) {
                     toast.error('E-Mail already registered.');
                 }
-                else if(response.data['message'] === 0) {
+                else if(response.data.message === 0) {
                     toast.error('Server error.');
                 }
                 else {
                     setLoggedIn(true);
-                    localStorage.setItem('token',response.data['token']);
-                    navigate('/'); 
+                    localStorage.setItem('token',response.data.token);
+                    localStorage.setItem('user',username);
+                    localStorage.setItem('id',response.data.user._id);
+                    localStorage.setItem('username',response.data.user.username);
+                    navigate('/', {
+                        state: {
+                            username: username,
+                            email: email,
+                            id: response.data.user._id
+                        }
+                    }); 
                 }
             })
             .catch((error)=>{

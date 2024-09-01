@@ -1,0 +1,140 @@
+.navbar-d-container {
+    position: sticky;
+    top: 5vh;
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    height: 86vh;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.1em;
+    padding-top: 4vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 3vw;
+}
+
+.navbar-d-name {
+    color: #464040;
+}
+
+.navbar-d-friends {
+    cursor: pointer;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 3% 2% 3%;
+    font-family: inherit;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.5em;
+    border-radius: 6px;
+    border: 0;
+    background-color: transparent;
+}
+
+.navbar-d-friends:hover {
+    background-color: #685cfe;
+    transition: 500ms;
+}
+
+.navbar-d-friends-icon {
+    fill: #464040;
+}
+
+.navbar-d-friends:hover > .navbar-d-friends-icon {
+    fill: rgb(241, 243, 245);
+}
+
+.navbar-d-friends-tag {
+    margin-left: 10px;
+    color: #464040;
+}
+
+.navbar-d-friends:hover > .navbar-d-friends-tag {
+    color: rgb(241, 243, 245);
+    transition: 500ms;
+}
+
+.navbar-d-favs {
+    cursor: pointer;
+    margin-top:5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 3% 2% 3%;
+    font-family: inherit;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.5em;
+    border-radius: 6px;
+    border: 0;
+    background-color: transparent;
+}
+
+.navbar-d-favs:hover {
+    background-color: #685cfe;
+    transition: 500ms;
+}
+
+.navbar-d-favs-icon {
+    fill: #464040;
+}
+
+.navbar-d-favs-tag {
+    margin-left: 10px;
+    color: #464040;
+}
+
+.navbar-d-favs:hover > .navbar-d-favs-icon {
+    fill: rgb(241, 243, 245);
+}
+
+.navbar-d-favs:hover > .navbar-d-favs-tag {
+    color: rgb(241, 243, 245);
+    transition: 500ms;
+}
+
+.navbar-d-logout {
+    cursor: pointer;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 3% 2% 3%;
+    font-family: inherit;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.5em;
+    border-radius: 6px;
+    border: 0;
+    background-color: transparent;
+}
+
+.navbar-d-logout:hover {
+    background-color: #685cfe;
+    transition: 500ms;
+}
+
+.navbar-d-logout-icon {
+    fill: #464040;
+}
+
+.navbar-d-logout:hover > .navbar-d-logout-icon {
+    fill: rgb(241, 243, 245);
+}
+
+.navbar-d-logout-tag {
+    margin-left: 10px;
+    color: #464040;
+}
+
+.navbar-d-logout:hover > .navbar-d-logout-tag {
+    color: rgb(241, 243, 245);
+}

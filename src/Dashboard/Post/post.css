@@ -1,0 +1,115 @@
+.backButtonPost {
+
+    position: fixed;
+    top:0;
+    left:85%;
+
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-right:4%;
+    color: rgb(124, 124, 204);
+    font-family: "Poppins", sans-serif;
+}
+
+.create-comment {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+.comment-textarea {
+    resize: none;
+    box-sizing: border-box;
+    background-color: #faf9f9;
+    border: 2px solid #adacac;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.comment-textarea:focus {
+    outline: none !important;
+    border:2px solid rgb(124, 118, 163);
+}
+
+.comment-post-button {
+    font-family: inherit;
+    width: 25%;
+    height: 15%;
+    border-radius: 10px;
+    margin-top: 1.5%;
+    border:0;
+    cursor: pointer;
+    background-color: rgb(46, 113, 229);
+    color:#f8f8f8;
+    margin-bottom:5%;
+}
+
+.ContainerForPost {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    width: 80%;
+    margin-left: 0.5%;
+    margin-bottom: 5%;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.post-user {
+    font-size: 26px;
+    font-weight: bold;
+    color: #363434;
+}
+
+.post-content {
+    margin-bottom: 3%;
+}
+
+.post-timestamp {
+    font-size:13px;
+    color: #615b5b;
+    margin-bottom: 0.5%;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-heading {
+    font-size: 23px;
+    font-weight: bold;
+    color: #363434;
+    margin-bottom: 2%;
+}
+
+.comment-username-p {
+    font-size:20px;
+    font-weight: bold;
+    color: #363434;
+}
+
+.comment-content-p {
+    color: #363434;
+}
+
+.comment-reply {
+    cursor: pointer;
+}
+
+.comment-timestamp {
+    color:#847e7e;
+    margin-left: 1.5%;
+}
+
+.test {
+color: #5176cb}
