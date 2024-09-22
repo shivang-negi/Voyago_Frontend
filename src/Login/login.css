@@ -2,7 +2,6 @@
     display: flex;
     height: 100vh;
     width: 100vw;
-    background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(223,226,230,1) 100%);
     position: relative;
     align-items: center;
@@ -43,20 +42,20 @@
     justify-content: center;
     padding-left: 15px;
     border-radius: 9999px;
-    background-color: rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     margin-bottom: 10px;
 }
 
 .LoginUsername {
-    border-radius: 9999px;
     border-style: solid;
     border-color: transparent;
-    background-color: rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     height: 30px;
-    padding-left: 20px;
+    margin-left: 20px;
     padding-top: 6px;
     padding-bottom: 6px;
     font-size: 1.2em;
+    border-bottom: 2px solid rgb(102,102,102);
 }
 
 .LoginUsername:focus {
@@ -80,20 +79,20 @@
     justify-content: center;
     padding-left: 15px;
     border-radius: 9999px;
-    background-color: rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     margin-bottom: 30px;
 }
 
 .LoginPassword {
-    border-radius: 9999px;
     border-style: solid;
     border-color: transparent;
-    background-color: rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     height: 30px;
-    padding-left: 20px;
+    margin-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 1.2em;
+    border-bottom: 2px solid rgb(102,102,102);
 }
 
 .LoginPassword:focus {
@@ -111,7 +110,7 @@
 }
 
 .LoginSubmit {
-    border-radius: 9999px;
+    /* border-radius: 9999px; */
     border-style: solid;
     border-color: transparent;
     background-color: rgb(87,184,70);
@@ -121,6 +120,8 @@
     font-style: normal;
     font-size: 1.4em;
     cursor: pointer;
+    margin-bottom: 20px;
+    margin-left:20px;
 
     &:disabled {
         background-color: #757575;

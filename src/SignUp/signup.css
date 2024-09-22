@@ -26,7 +26,8 @@
     font-style: normal;
     font-size: 2.2em;
     text-align: center;   
-    margin-bottom: 4%; 
+    margin-bottom: 2%; 
+    margin-top:3%;
 }
 
 .signup-form {
@@ -41,20 +42,21 @@
     justify-content: center;
     padding-left: 15px;
     border-radius: 9999px;
-    background-color: rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     margin-bottom: 10px;
 }
 
 .signup-input-name {
-    border-radius: 9999px;
+    /* border-radius: 9999px; */
     border-style: solid;
     border-color: transparent;
-    background-color: rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     height: 30px;
-    padding-left: 20px;
+    margin-left: 20px;
     padding-top: 6px;
     padding-bottom: 6px;
     font-size: 1.2em;
+    border-bottom: 2px solid rgb(102,102,102);
 }
 
 .signup-input-name:focus {
@@ -78,20 +80,21 @@
     justify-content: center;
     padding-left: 15px;
     border-radius: 9999px;
-    background-color: rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     margin-bottom: 10px;
 }
 
 .signup-input-email {
-    border-radius: 9999px;
+    /* border-radius: 9999px; */
     border-style: solid;
     border-color: transparent;
-    background-color: rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     height: 30px;
-    padding-left: 20px;
+    margin-left: 20px;
     padding-top: 6px;
     padding-bottom: 6px;
     font-size: 1.2em;
+    border-bottom: 2px solid rgb(102,102,102);
 }
 
 .SignUpEmailIcon {
@@ -111,20 +114,20 @@
     justify-content: center;
     padding-left: 15px;
     border-radius: 9999px;
-    background-color: rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     margin-bottom: 10px;
 }
 
 .signup-input-calendar {
-    border-radius: 9999px;
     border-style: solid;
     border-color: transparent;
-    background-color: rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     height: 30px;
-    padding-left: 20px;
+    margin-left: 20px;
     padding-top: 6px;
     padding-bottom: 6px;
     font-size: 1.2em;
+    border-bottom: 2px solid rgb(102,102,102);
 }
 
 .CalendarIcon {
@@ -139,20 +142,20 @@
     justify-content: center;
     padding-left: 15px;
     border-radius: 9999px;
-    background-color: rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     margin-bottom: 25px;
 }
 
 .LoginPW {
-    border-radius: 9999px;
     border-style: solid;
     border-color: transparent;
-    background-color: rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     height: 30px;
-    padding-left: 20px;
+    margin-left: 20px;
     padding-top: 6px;
     padding-bottom: 6px;
     font-size: 1.2em;
+    border-bottom: 2px solid rgb(102,102,102);
 }
 
 .LoginPW:focus {

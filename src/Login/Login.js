@@ -76,6 +76,11 @@ export default function Login() {
         console.log('create account');
     }
 
+    function oauthLogin() {
+        console.log('oauth login');
+        window.location.href = 'http://localhost:5000/auth/google/callback';
+    }
+
     return (
         <div className="LoginScreen">
             
@@ -90,7 +95,7 @@ export default function Login() {
             <div className='LoginContainer'>
 
                 <div className='LoginHeading'>
-                    Sign In
+                    Login
                 </div>
 
                 <div className='LoginFormContainer'>
@@ -124,7 +129,7 @@ export default function Login() {
                     <span className='ORText'>OR</span>
                 </div>
 
-                <button className="login-with-google-btn" disabled={loading}>
+                <button className="login-with-google-btn" disabled={loading} onClick={oauthLogin}>
                     Sign in with Google
                 </button>
                 

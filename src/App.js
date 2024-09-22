@@ -7,6 +7,7 @@ import Dashboard from './Dashboard/dashboard.js';
 import { useState, createContext, useContext, useEffect } from 'react';
 import { SyncLoader } from 'react-spinners';
 import Post from './Dashboard/Post/post.js';
+import toast, { Toaster } from 'react-hot-toast';
 
 const AuthContext = createContext();
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/post/:postId" element={<PrivateRoute/>}/>
+          <Route path="/oauthlogin" element={<OauthLogin/>}/>
         </Routes>
       </Router>
     </AuthProvider>
@@ -119,6 +121,50 @@ function FindPath() {
       :
       ((loggedIn)?<Dashboard email={userData.email} username={userData.username} id={userData.id}/>: <Homepage/>)
       );
+}
+
+function OauthLogin() {
+
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+    const cookieString = document.cookie;
+
+    const cookieObj = cookieString.split('; ').reduce((acc, current) => {
+      const [key, value] = current.split('=');
+      acc[key] = value;
+      return acc;
+    }, {});
+    
+    let name = cookieObj.name;
+    let email = cookieObj.email;
+    let id = cookieObj.id;
+    let token = cookieObj.jwt;
+
+    name = decodeURIComponent(name);
+    email = decodeURIComponent(email);
+    id = decodeURIComponent(id);
+    token = decodeURIComponent(token);
+
+    localStorage.setItem('token',token);
+    localStorage.setItem('user',email);
+    localStorage.setItem('id',id);
+    localStorage.setItem('username',name);
+
+    console.log("\n" + id + "\n" + name + "\n" + email + "\n" + token + "\n");
+    setLoading(false);
+    navigate('/');
+  },[]);
+
+  return loading?<SyncLoader 
+        color='#36d7b7'
+        size={25} 
+        margin={3} 
+        className='loginLoader'/>
+      :
+      <div/>
+      
 }
 
 export default App;

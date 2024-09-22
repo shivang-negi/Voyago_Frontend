@@ -23,6 +23,11 @@ export default function Signup() {
         return emailPattern.test(email);
     }  
 
+    function oauthLogin() {
+        console.log('oauth login');
+        window.location.href = 'http://localhost:5000/auth/google/callback';
+    }
+
     useEffect(() => {
         // Initialize Pikaday when the component mounts
         const picker = new Pikaday({
@@ -173,7 +178,7 @@ export default function Signup() {
                     <span className='ORText'>OR</span>
                 </div>
 
-                <button className="login-with-google-btn" disabled={loading}>
+                <button className="login-with-google-btn" disabled={loading} onClick={oauthLogin}>
                     Sign in with Google
                 </button>
 
